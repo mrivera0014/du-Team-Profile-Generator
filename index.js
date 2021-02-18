@@ -2,11 +2,17 @@ const inquirer = require('inquirer')
 const fs = require('fs')
 const util = require('util')
 
-const generateFile = require('./util/generateFile')
+const generate = require('./src/templates')
 const writeFileAsync = util.promisify(fs.writeFile)
 
-const questions = () => {
-    return inquirer.prompt([
+const Manager = require('./util/Manager')
+const Intern = require('./util/Intern')
+const Engineer = require('./util/Engineer')
+
+const team = []
+
+function manager() {
+    inquirer.prompt([
         {
             type: "Input",
             message: "Enter the team manager's name",
@@ -30,7 +36,6 @@ const questions = () => {
                     return true
                 } return "Error: Must enter a valid email"
             }
-            // return email === '/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/'
         },
         {
             //need to verify that users input is valid cannot enter letters should be #'s only
@@ -39,7 +44,7 @@ const questions = () => {
             name: "officeNumber",
             validate: function (officeNumber) {
                 // let officeNumber = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-                const valid = officeNumber.match(/0123456789/g)
+                const valid = officeNumber.match(/[0-9]/g)
                 if (valid) {
                     return true //this returned the error message when the input matched the ABCabc
                 } return "Error: Must enter valid office number"
@@ -52,30 +57,40 @@ const questions = () => {
                 //     return tr
                 // } return
             }
-        },
-        {
-            //need an errCb to verify that users input is valid
-            type: "List",
-            message: "What type of team member would you like to add?",
-            choices: ["Engineer", "Intern", "Done adding team members"],
-            name: "managerEmail"
-        },
-        {
-            //need an errCb to verify that users input is valid
-            type: "Input",
-            message: "Enter the team manager's email",
-            name: "managerEmail"
-        },
-    ])
+        }]).then(answer => {
+            const manager = new Manager(answer.officeNumber, answer.email, answer.managerId, answer.managerName)
+            team.push(manager)
+            addMember()
+        })
 }
-
-const init = () => {
-    questions()
-        .then((answer) => writeFileAsync('index.html', generateFile(answer)))
-        .then(() => console.log('File Created.'))
-        .catch((err) => console.log(err))
+function addMember() {
+    inquirer.prompt([
+        {
+            type: "list",
+            name: "memberAdded",
+            message: "Which team member would you like to add?",
+            choices: ["Intern", "Engineer", "Manager", "I am done"]
+        }
+    ]).then(choice => {
+        switch (choice.memberAdded) {
+            case "Intern":
+                addIntern()
+                break;
+            case "Engineer":
+                addEngineer()
+                break;
+            case "Manager":
+                manager()
+                break;
+            default:
+                generateTeam()
+        }
+    })
 }
+//create intern, engineer functions here
 
-init()
+function generateTeam() {
 
-// return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+}
+manager()
+
