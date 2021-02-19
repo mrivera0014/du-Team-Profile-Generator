@@ -1,13 +1,17 @@
 const inquirer = require('inquirer')
 const fs = require('fs')
 const util = require('util')
-
-const generate = require('./src/templates')
-const writeFileAsync = util.promisify(fs.writeFile)
-
+const path = require('path')
 const Manager = require('./util/Manager')
 const Intern = require('./util/Intern')
 const Engineer = require('./util/Engineer')
+const generate = require('./src/templates')
+
+const writeFileAsync = util.promisify(fs.writeFile)
+const output = path.resolve(__dirname, 'output')
+const outputPath = path.join(output, "team.html")
+
+
 
 const team = []
 
@@ -90,7 +94,10 @@ function addMember() {
 //create intern, engineer functions here
 
 function generateTeam() {
-
+    if (!fs.existsSync(output)) {
+        fs.mkdirSync(output)
+    }
+    writeFileAsync(outputPath, generate(team), "utf-8")
 }
 manager()
 
