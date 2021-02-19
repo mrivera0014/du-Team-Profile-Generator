@@ -10,6 +10,8 @@ it('should create officeNumber variable and value', () => {
 describe("getRole", () => {
     it('should return the value of manager', () => {
         const testValue = 'Manager'
+        const test = new Manager("Stephen", 12, "stephen@stephen.com", testValue)
+        expect(test.getRole()).toEqual(testValue)
     })
 })
 describe("getOfficeNumber", () => {
