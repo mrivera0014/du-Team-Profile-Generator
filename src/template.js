@@ -1,6 +1,11 @@
+const employee = require('../util/Employee')
+const manager = require('../util/Manager')
+const engineer = require('../util/Engineer')
+const intern = require('../util/Intern')
+
 const generate = team => {
-    const generateManager = manager => {
-        return `
+    const generateManager =
+        `
              <div class="card employee-card">
         <div class="card-header">
             <h2 class="card-title">${manager.getName()}</h2>
@@ -14,7 +19,9 @@ const generate = team => {
             </ul>
         </div>
     </div>`
-    }
+
     const html = []
     html.push(team.filter(member => member.getRole() === "Manager").map(manager => generateManager(manager)))
 }
+
+module.exports = generate
