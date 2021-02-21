@@ -43,4 +43,4 @@ npm test
 If you have any questions contact me at mrivera0014@gmail.com.
 Find more of my work at (https://github.commrivera0014/)
 
-For a video walk through ![click here](https://drive.google.com/file/d/1SKZAqFfa_YENvFkwu_kWzDVFADJLZq5D/view)
+For a video walk through ![click here(https://drive.google.com/file/d/1SKZAqFfa_YENvFkwu_kWzDVFADJLZq5D/view)]
