@@ -5,7 +5,7 @@
 
 
 ## Description
-Create an command line application that will generate an HTML webpage based on user input.
+Create a command line application that will generate an HTML webpage based on user input.
 
 ## Table of Contents
 [Title](##Title)
@@ -27,10 +27,6 @@ npm i
 N/A
 
 
-
-
-
-
 ## Contributing
 Contact me
 
@@ -41,6 +37,6 @@ npm test
 
 ## Questions
 If you have any questions contact me at mrivera0014@gmail.com.
-Find more of my work at (https://github.commrivera0014/)
+Find more of my work at (https://github.com/mrivera0014/)
 
 For a video walk through [click here](https://drive.google.com/file/d/1SKZAqFfa_YENvFkwu_kWzDVFADJLZq5D/view)
