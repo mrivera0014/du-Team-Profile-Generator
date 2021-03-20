@@ -1,42 +1,61 @@
-# 
-    
- ## Title
- du-Team-Profile-Generator
+# du-Team-Profile-Generator
 
 
 ## Description
+
 Create a command line application that will generate an HTML webpage based on user input.
 
 ## Table of Contents
-[Title](##Title)
-[Description](##Description)
-[Installations](##Installations)
-[Usage](##Usage)
-[License](##License)
-[Contributing](##Contributing)
-[Questions](##Questions)
 
+* [Title](##Title)
+</br>
+
+* [Description](##Description)
+</br>
+
+* [Installations](##Installations)
+</br>
+
+* [Usage](##Usage)
+</br>
+
+* [License](##License)
+</br>
+
+* [Contributing](##Contributing)
+</br>
+
+* [Questions](##Questions)
 
 
 
 ## Installations
+
 npm i
+
+For this project inquirer and jest were used.
 
 
 ## Usage
-N/A
 
+To run the application run the following command:
 
-## Contributing
-Contact me
+node index.js
 
 ## Tests
+
 To run tests run the following command:
 
 npm test
 
 ## Questions
+
 If you have any questions contact me at mrivera0014@gmail.com.
 Find more of my work at (https://github.com/mrivera0014/)
 
-For a video walk through [click here](https://drive.google.com/file/d/1SKZAqFfa_YENvFkwu_kWzDVFADJLZq5D/view)
+## Video Walk Through
+[Click Here](https://drive.google.com/file/d/1SKZAqFfa_YENvFkwu_kWzDVFADJLZq5D/view)
+
+## Github Repository
+
+[du-Team-Profile-Generator](https://github.com/mrivera0014/du-Team-Profile-Generator)
