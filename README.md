@@ -1,13 +1,12 @@
 # du-Team-Profile-Generator
 
-
 ## Description
 
 Create a command line application that will generate an HTML webpage based on user input.
 
 ## Table of Contents
 
-* [Title](##Title)
+* [du-Team-Profile-Generator](##du-Team-Profile-Generator)
 </br>
 
 * [Description](##Description)
@@ -19,13 +18,17 @@ Create a command line application that will generate an HTML webpage based on us
 * [Usage](##Usage)
 </br>
 
-* [License](##License)
-</br>
-
-* [Contributing](##Contributing)
+* [Tests](##Tests)
 </br>
 
 * [Questions](##Questions)
+</b>
+
+* [Video-Walk-Through](##Video-Walk-Through)
+</br>
+
+* [Github-Repository](##Github-Repository)
+</br>
 
 
 
@@ -51,11 +54,11 @@ npm test
 ## Questions
 
 If you have any questions contact me at mrivera0014@gmail.com.
-Find more of my work at (https://github.com/mrivera0014/)
 
-## Video Walk Through
+## Video-Walk-Through
+
 [Click Here](https://drive.google.com/file/d/1SKZAqFfa_YENvFkwu_kWzDVFADJLZq5D/view)
 
-## Github Repository
+## Github-Repository
 
-[du-Team-Profile-Generator](https://github.com/mrivera0014/du-Team-Profile-Generator)
+[Link to Github Repository](https://github.com/mrivera0014/du-Team-Profile-Generator)
